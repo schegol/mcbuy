@@ -6,10 +6,10 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
-  line-height: 100%;
-  font-family: "Circe", "Arial", sans-serif;
+  line-height: normal;
+  font-family: "Geometria", "Arial", sans-serif;
   color: #000;
   background-color: #fff;
 
@@ -47,10 +47,4 @@ a {
   overflow: hidden;
   border: 0;
   clip: rect(0 0 0 0);
-}
-
-@media (max-width: $md) {
-  body {
-    font-size: 14px;
-  }
 }
