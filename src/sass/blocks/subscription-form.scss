@@ -1,0 +1,81 @@
+.subscription-form {
+  @include dflex(nowrap, column, flex-start, center);
+  padding: 85px 102px 85px;
+  background-color: #fafafa;
+}
+
+.subscription-form__heading {
+  @include reset;
+  margin-bottom: 18px;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: normal;
+  text-align: center;
+}
+
+.subscription-form__subheading {
+  @include reset;
+  margin-bottom: 31px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: normal;
+  text-align: center;
+}
+
+.subscription-form__email-input {
+  @include transition(border-color);
+  width: 100%;
+  margin-bottom: 17px;
+  padding: 20px 32px;
+  font-size: 14px;
+  border: 1px solid #EBEBEB;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    border-color: $bg-color-dark;
+  }
+}
+
+.subscription-form__submit-btn {
+  width: 100%;
+  border: none;
+}
+
+@media (max-width: $lg) {
+  .subscription-form {
+    padding: 70px;
+  }
+}
+
+@media (max-width: $md) {
+  .subscription-form {
+    padding: 50px;
+  }
+
+  .subscription-form__heading {
+    margin-bottom: 15px;
+    font-size: 28px;
+  }
+
+  .subscription-form__subheading {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: $xs) {
+  .subscription-form {
+    padding: 30px 20px;
+  }
+
+  .subscription-form__heading {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+
+  .subscription-form__subheading {
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+}
