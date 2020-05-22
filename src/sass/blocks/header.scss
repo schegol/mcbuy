@@ -21,3 +21,120 @@
     text-decoration: underline;
   }
 }
+
+.header__main-part {
+  padding: 10px 0 21px;
+}
+
+.header__main-part .container {
+  @include dflex(nowrap, column, flex-start, stretch);
+}
+
+.header__top-info {
+  @include dflex(nowrap, row, space-between, center);
+}
+
+.header__contacts {
+  @include dflex(nowrap, row, flex-start, center);
+}
+
+.header__contacts-item {
+  padding-left: 22px;
+  color: #000;
+  font-size: 14px;
+  line-height: 28px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 14px;
+
+  &:not(:last-child) {
+    margin-right: 58px;
+  }
+}
+
+.header__contacts-item a {
+  @include transition(color);
+  color: #000;
+  font-size: 14px;
+  line-height: 28px;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.header__small-menu {
+  @include dflex(nowrap, row, flex-end, center);
+}
+
+.header__small-menu-link {
+  @include transition(color);
+  margin-right: 50px;
+  color: rgba(0,0,0,.42);
+  font-size: 14px;
+  line-height: 28px;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.header__icon-menu {
+  @include reset;
+}
+
+.header__small-menu-icon {
+  outline: none;
+
+  &:not(:last-child) {
+    margin-right: 28px;
+  }
+}
+
+.header__small-menu-icon svg {
+  @include transition(fill);
+  fill: #000;
+  outline: none;
+}
+
+
+.header__small-menu-icon:hover svg,
+.header__small-menu-icon:focus svg {
+  fill: $accent-color;
+}
+
+.header__logo-link {
+  display: block;
+  margin: 10px auto 26px;
+}
+
+.header__logo-img {
+  display: block;
+}
+
+.header__menu-list {
+  @include list-reset;
+  @include dflex(nowrap, row, space-between, center);
+}
+
+.header__menu-link {
+  @include transition(color);
+  color: #000;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  outline: none;
+
+  &--highlighted {
+    color: #fa1a1a;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}

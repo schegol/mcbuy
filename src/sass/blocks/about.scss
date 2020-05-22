@@ -1,0 +1,34 @@
+.about {
+  margin-bottom: 100px;
+}
+
+.about .container {
+  @include dflex(nowrap, row, space-between, center);
+}
+
+.about__text-wrapper {
+  flex-basis: 50%;
+}
+
+.about__heading {
+  @include reset;
+  font-family: "21Cent";
+  font-size: 34px;
+  color: #111;
+}
+
+.about__text {
+  font-size: 16px;
+  line-height: 24px;
+  color: #111;
+}
+
+.about__img-wrapper {
+  @include dflex(nowrap, row, flex-end, center);
+  flex-basis: 50%;
+}
+
+.about__img {
+  width: 680px;
+  height: auto;
+}

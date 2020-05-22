@@ -1,0 +1,17 @@
+.btn {
+  @include dflex(nowrap, row, center, center);
+  @include transition(background-color);
+  height: 50px;
+  padding: 0 55px;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: #111;
+  cursor: pointer;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}

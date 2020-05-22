@@ -1,0 +1,57 @@
+.email-subscription {
+  margin-bottom: 163px;
+  padding: 29px 0;
+  background-color: #f7f7f7;
+}
+
+.email-subscription .container {
+  @include dflex(nowrap, row, space-between, center);
+}
+
+.email-subscription__text {
+  @include dflex(nowrap, column, flex-start, flex-start);
+}
+
+.email-subscription__heading {
+  @include reset;
+  margin-bottom: 3px;
+  font-size: 25px;
+  line-height: 30px;
+  color: #111;
+  font-weight: 500;
+}
+
+.email-subscription__subheading {
+  @include reset;
+  font-size: 16px;
+  line-height: 30px;
+  color: #636363;
+  font-weight: 400;
+}
+
+.email-subscription__form {
+  @include dflex(nowrap, row, flex-end, center);
+}
+
+.email-subscription__email-input {
+  @include transition(border-color);
+  width: 391px;
+  height: 46px;
+  padding: 10px;
+  border: 1px solid transparent;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    border: 1px solid #111;
+  }
+}
+
+.email-subscription__submit-btn {
+  min-width: 180px;
+  height: 46px;
+  padding: 0;
+  font-size: 14px;
+  line-height: 21px;
+  border: none;
+}
