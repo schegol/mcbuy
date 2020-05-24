@@ -13,10 +13,17 @@
 }
 
 .single-offer__block {
+  @include transition(transform);
   position: relative;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  transform: scale(1);
+
+  &:hover,
+  &:focus-within {
+    transform: scale(1.02);
+  }
 }
 
 .single-offer__floating-img {
@@ -34,14 +41,7 @@
 }
 
 .single-offer--type-1 .single-offer__block {
-  @include transition(transform);
   min-height: 644px;
-  transform: scale(1);
-
-  &:hover,
-  &:focus-within {
-    transform: scale(1.02);
-  }
 }
 
 .single-offer--type-2 .single-offer__block {
