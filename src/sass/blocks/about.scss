@@ -13,9 +13,10 @@
 .about__heading {
   @include reset;
   margin-bottom: 15px;
-  font-family: "21Cent";
+  font-family: "21Cent", serif;
   font-size: 34px;
   color: #111;
+  letter-spacing: -0.02em;
 }
 
 .about__text {

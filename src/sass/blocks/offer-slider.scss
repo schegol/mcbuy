@@ -21,7 +21,7 @@
   position: absolute;
   top: 165px;
   left: 50%;
-  width: calc(100% + 80px);
+  width: calc(100% + 50px);
   max-width: 99vw;
   height: auto;
   padding: 0 5px;
@@ -134,7 +134,7 @@
   text-align: center;
   font-size: 19px;
   line-height: 28px;
-  font-family: "21Cent";
+  font-family: "21Cent", serif;
 }
 
 .offer-slider__old-price {
@@ -204,6 +204,11 @@
 @media (max-width: $sm) {
   .offer-slider {
       margin-bottom: 50px;
+  }
+
+  .offer-slider__slider-block {
+    width: calc(100% + 10px);
+    margin: 0 0px 0 -5px;
   }
 
   .offer-slider__heading {
