@@ -32,6 +32,19 @@ $(document).ready(function () {
     };
   });
 
+  // фикс. акция наверху страницы:
+  const offerLine = $('.header__offer-line');
+  const offerLineCloseBtn = $('.header__offer-close');
+
+  let offerLineHeight = offerLine.outerHeight();
+  body.css('padding-top', offerLineHeight+'px');
+
+  offerLineCloseBtn.click(function (e) {
+    e.preventDefault();
+    offerLine.addClass('header__offer-line--closed');
+    body.css('padding-top', 0);
+  });
+
   //слайдер:
   const slider = $('.offer-slider__slider-slides');
 
@@ -74,6 +87,11 @@ $(document).ready(function () {
   });
 
   $(window).resize(function () {
+    if (!offerLine.hasClass('header__offer-line--closed')) {
+      let offerLineHeight = offerLine.outerHeight();
+      body.css('padding-top', offerLineHeight+'px');
+    };
+    
     if ($(window).width() >= 768) {
       if (body.hasClass('modal-open')) {
         body.removeClass('modal-open');

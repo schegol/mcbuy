@@ -1,9 +1,20 @@
 .header__offer-line {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 50px;
   background-color: #cde4ec;
+  z-index: 100;
+
+  &--closed {
+    display: none;
+  }
 }
 
 .header__offer-line .container {
   @include dflex(nowrap, row, center, center);
+  position: relative;
   height: auto;
   min-height: 45px;
 }
@@ -20,6 +31,28 @@
   &:hover,
   &:focus {
     text-decoration: underline;
+  }
+}
+
+.header__offer-close {
+  @include dflex(nowrap, row, center, center);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%);
+
+  & path {
+    @include transition(fill);
+    fill: #676767;
+  }
+
+  &:hover,
+  &:focus {
+    & path {
+      fill: $accent-color;
+    }
   }
 }
 
@@ -156,6 +189,14 @@
   }
 }
 
+@media (max-width: $lg) {
+  .header__contacts-item {
+    &:not(:last-child) {
+      margin-right: 28px;
+    }
+  }
+}
+
 @media (max-width: $md) {
   .header__contacts {
     justify-content: space-between;
@@ -287,6 +328,12 @@
     font-size: 16px;
   }
 
+  .header__contacts-item,
+  .header__contacts-item a {
+    font-size: 11px;
+    line-height: 22px;
+  }
+
   .header__small-menu-link {
     margin-right: 28px;
 
@@ -311,6 +358,14 @@
 }
 
 @media (max-width: $xs) {
+  .header__offer-close {
+    right: 15px;
+  }
+  .header__offer-link {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
   .header__contacts {
     flex-direction: column;
     justify-content: flex-start;
